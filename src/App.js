@@ -64,7 +64,7 @@ class App extends Component {
   
   //Function when component is mounting and showing the static data of mumbai region news
   componentDidMount() {
-    const URL = `https://gnews.io/api/v3/search?q=mumbai&token=b7cd3031c5aaed1a3eb876eb3ea3530f `;
+    const URL = `https://gnews.io/api/v3/search?q=washington&token=1e8cdb0986d7a3f4f20ded0f4bcdecd3 `;
     axios
       .get(URL)
       .then((response) => {
