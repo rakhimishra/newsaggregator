@@ -48,7 +48,9 @@ class App extends Component {
     const Search = this.state.search;
     const top_news =
       "https://gnews.io/api/v3/top-news?token=1e8cdb0986d7a3f4f20ded0f4bcdecd3";
-    const URL = `https://gnews.io/api/v3/search?q=${Search}&token=1e8cdb0986d7a3f4f20ded0f4bcdecd3`;
+    const URL = `https://gnews.io/api/v3/search?q=${Search}&token=24465f19f7942a9922532e25d5e0cfb0
+
+    `;
     axios
       .get(URL)
       .then((response) => {
@@ -61,10 +63,11 @@ class App extends Component {
       });
   };
 
-  
   //Function when component is mounting and showing the static data of mumbai region news
   componentDidMount() {
-    const URL = `https://gnews.io/api/v3/search?q=washington&token=1e8cdb0986d7a3f4f20ded0f4bcdecd3 `;
+    const URL = `https://gnews.io/api/v3/search?q=washington&token=24465f19f7942a9922532e25d5e0cfb0
+
+    `;
     axios
       .get(URL)
       .then((response) => {
@@ -85,7 +88,7 @@ class App extends Component {
 
   abortController = new AbortController();
   controllerSignal = this.abortController.signal;
-  
+
   //Funtion to actually initialising to get the users geolocation
   weatherInit = () => {
     const success = (position) => {
@@ -118,6 +121,7 @@ class App extends Component {
 
     fetch(weatherApi, { signal: this.controllerSignal })
       .then((response) => response.json())
+
       .then(
         (result) => {
           console.log(result);
@@ -185,7 +189,7 @@ class App extends Component {
     const { posts, error } = this.state;
     return (
       <>
-      {/* Navigation bar of the app */}
+        {/* Navigation bar of the app */}
 
         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="#home">News Aggregator App</Navbar.Brand>
@@ -226,15 +230,15 @@ class App extends Component {
             <div
               className="Outer-Card"
               style={{
-                width: "400px",
-                height: "600px",
+                width: "315px",
+                height: "650px",
                 borderRadius: "10px",
-                margin: "30px",
+                margin: "20px",
                 boxShadow: "5px 5px 6px 3px rgb(204,204,204)",
                 position: "relative",
               }}
             >
-              <Card style={{ border: "none" }}>
+              <Card style={{ border: "none", overflow: "hidden" }}>
                 <img
                   variant="top"
                   src={post.image}
@@ -248,7 +252,9 @@ class App extends Component {
               </Card>
               <div style={{ position: "absolute", bottom: 0, margin: "20px" }}>
                 <div>
-                  <Button variant="primary" href={post.url}>Read More</Button>
+                  <Button variant="primary" href={post.url}>
+                    Read More
+                  </Button>
                 </div>
                 <small className="text-muted">
                   Last updated at {post.publishedAt}
