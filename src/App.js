@@ -8,7 +8,7 @@ import {Nav, Navbar,Form,FormControl,Button} from 'react-bootstrap'
 import NavigationBar from './components/Cards'
 import Cards from './components/Cards'
 import './App.scss';
-
+import "./index.css";
 import { WeatherData } from './components/WeatherData'
 import { StatusData } from './components/StatusData'
 const API_KEY ="c7fcb4212b3dd249688a043361e8c60f "
@@ -73,7 +73,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const URL = `https://gnews.io/api/v3/search?q=mumbai&token=c00788edd534553dcf760e657940b6f4
+    const URL = `https://gnews.io/api/v3/search?q=mumbai&token=b7cd3031c5aaed1a3eb876eb3ea3530f
 
     `;
     axios
@@ -206,17 +206,19 @@ class App extends Component {
     
     return (
       <>
-        <Navbar bg="dark" variant="dark" fixed="top">
-        <Navbar.Brand href="#home">News Aggregator App</Navbar.Brand>
+      
+        <Navbar  bg="dark" variant="dark" fixed="top" >
+   
+          <Navbar.Brand className="name" href="#home">News Aggregator App</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="#home">Home</Nav.Link>
       
           </Nav>
-          <Form inline>
+          <Form className="form" inline>
             <FormControl type="text" placeholder=" Search any news" className="mr-sm-2" onChange={this.handleChange1} />
               <Button variant="outline-info" onClick={this.handleSubmit}>Search</Button>
           </Form>
-          <DropdownButton id="dropdown-item-button" title="Filter your search.." style={{paddingLeft: 10}} onClick={this.onSearch} onChange={this.onSearchChange}>
+          <DropdownButton id="dropdown-item-button" title="Filter your search.." className="dropdown-" style={{paddingLeft: 10}} onClick={this.onSearch} onChange={this.onSearchChange}>
             <Dropdown.ItemText>Interests</Dropdown.ItemText>
             <Dropdown.Item as="button" >World</Dropdown.Item>
             <Dropdown.Item as="button">Science</Dropdown.Item>
@@ -227,29 +229,34 @@ class App extends Component {
             <Dropdown.Item as="button">Sports</Dropdown.Item>
             <Dropdown.Item as="button">Health</Dropdown.Item>
           </DropdownButton>
+         
+        
         </Navbar>
         <div className='App'>
-        <div className='container'>
+          <div className='container'>
           {this.returnActiveView(this.state.status)}
         </div>
       </div>
-       <CardDeck style={{margin: "100px", display:"grid" ,gridTemplateColumns:"repeat(3,auto)",justifyContent:"Space-between"}}>
+       <CardDeck className="CardDeck" style={{ display:"flex" ,flexWrap: "wrap",justifyContent:"center"}}>
        
        {posts.map(post=>(
-           
-           <Card style={{borderRadius:"10px", marginTop:"30px", boxShadow: "10px 10px 8px #888888"}}>
-           <Card.Img variant="top" src={post.image} />
+           <div className="Outer-Card" style={{width:"400px",height:"600px",borderRadius:"10px", margin:"30px", boxShadow: "5px 5px 6px 3px rgb(204,204,204)",position:"relative"}}>
+             <Card style={{border:"none"}}>
+           <img variant="top" src={post.image} style={{margin:"15px",height:"200px",weight:"100px"}}/>
            <Card.Body>
              <Card.Title>{post.title}</Card.Title>
              <Card.Text>
               {post.description}
              </Card.Text>
            </Card.Body>
-           <Card.Footer>
+           
+         </Card>
+              <div style={{position:"absolute",bottom:0,margin:"20px", }}>
             <div><Button variant="primary">Read More</Button></div>
             <small className="text-muted">Last updated at {post.publishedAt}</small>
-           </Card.Footer>
-         </Card>
+              </div>
+           </div>
+           
          ))}
         </CardDeck>
       
