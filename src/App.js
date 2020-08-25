@@ -113,7 +113,7 @@ class App extends Component {
   //Function to get the weather data by fetching the Weatherapi with key and latitude longitude of the users location
   getWeatherData = (lat, lon) => {
     const API_KEY = process.env;
-    const weatherApi = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=c7fcb4212b3dd249688a043361e8c60f
+    const weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=c7fcb4212b3dd249688a043361e8c60f
     `;
 
     fetch(weatherApi, { signal: this.controllerSignal })
