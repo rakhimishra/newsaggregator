@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/newsaggregator/static/css/main.66a79f13.chunk.css",
-    "main.js": "/newsaggregator/static/js/main.08de9595.chunk.js",
-    "main.js.map": "/newsaggregator/static/js/main.08de9595.chunk.js.map",
+    "main.css": "/newsaggregator/static/css/main.27db217e.chunk.css",
+    "main.js": "/newsaggregator/static/js/main.1fda18d1.chunk.js",
+    "main.js.map": "/newsaggregator/static/js/main.1fda18d1.chunk.js.map",
     "runtime-main.js": "/newsaggregator/static/js/runtime-main.0539e2e0.js",
     "runtime-main.js.map": "/newsaggregator/static/js/runtime-main.0539e2e0.js.map",
     "static/css/2.11829350.chunk.css": "/newsaggregator/static/css/2.11829350.chunk.css",
-    "static/js/2.2dbb8dc4.chunk.js": "/newsaggregator/static/js/2.2dbb8dc4.chunk.js",
-    "static/js/2.2dbb8dc4.chunk.js.map": "/newsaggregator/static/js/2.2dbb8dc4.chunk.js.map",
+    "static/js/2.2374b83f.chunk.js": "/newsaggregator/static/js/2.2374b83f.chunk.js",
+    "static/js/2.2374b83f.chunk.js.map": "/newsaggregator/static/js/2.2374b83f.chunk.js.map",
     "index.html": "/newsaggregator/index.html",
-    "precache-manifest.2180bd54046ae29241cf71856db5705c.js": "/newsaggregator/precache-manifest.2180bd54046ae29241cf71856db5705c.js",
+    "precache-manifest.6fb4af15f39121f34cde85705bb3a63b.js": "/newsaggregator/precache-manifest.6fb4af15f39121f34cde85705bb3a63b.js",
     "service-worker.js": "/newsaggregator/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/newsaggregator/static/css/2.11829350.chunk.css.map",
-    "static/css/main.66a79f13.chunk.css.map": "/newsaggregator/static/css/main.66a79f13.chunk.css.map",
-    "static/js/2.2dbb8dc4.chunk.js.LICENSE.txt": "/newsaggregator/static/js/2.2dbb8dc4.chunk.js.LICENSE.txt",
+    "static/css/main.27db217e.chunk.css.map": "/newsaggregator/static/css/main.27db217e.chunk.css.map",
+    "static/js/2.2374b83f.chunk.js.LICENSE.txt": "/newsaggregator/static/js/2.2374b83f.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/newsaggregator/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0539e2e0.js",
     "static/css/2.11829350.chunk.css",
-    "static/js/2.2dbb8dc4.chunk.js",
-    "static/css/main.66a79f13.chunk.css",
-    "static/js/main.08de9595.chunk.js"
+    "static/js/2.2374b83f.chunk.js",
+    "static/css/main.27db217e.chunk.css",
+    "static/js/main.1fda18d1.chunk.js"
   ]
 }
